@@ -1,0 +1,23 @@
+.gestor-container {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .gestor-container h2 {
+    color: #210d65;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  

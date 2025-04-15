@@ -1,0 +1,44 @@
+.buscador-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .buscador-container h2 {
+    margin-bottom: 20px;
+    color: #210d65;
+  }
+  
+  .buscador-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .buscador-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  
+  .buscador-form button {
+    background-color: #89DC00;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .buscador-form button:hover {
+    background-color: #76c500;
+  }
+  

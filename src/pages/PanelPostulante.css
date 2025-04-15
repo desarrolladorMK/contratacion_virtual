@@ -1,0 +1,67 @@
+.panel-postulante {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .panel-postulante h2 {
+    font-size: 26px;
+    color: #210d65;
+    margin-bottom: 20px;
+  }
+  
+  .panel-postulante p {
+    font-size: 18px;
+    margin: 8px 0;
+    color: #444;
+  }
+  
+  .panel-postulante strong {
+    color: #210d65;
+  }
+  
+  .form-subida {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 12px;
+    background: #f9f9f9;
+    text-align: left;
+  }
+  
+  .form-subida h4 {
+    color: #210d65;
+    margin-bottom: 15px;
+  }
+  
+  .form-subida input[type="file"],
+  .form-subida select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+  }
+  
+  .form-subida button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #89DC00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-subida button:hover {
+    background-color: #76c500;
+  }
+  

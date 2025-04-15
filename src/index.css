@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+:root {
+  --primary-color: #89DC00;   /* Verde Merkahorro */
+  --secondary-color: #210d65; /* Azul Oscuro Merkahorro */
+  --light-color: #f4f4f9;
+  --text-color: #333;
+  --error-color: #e63946;
+  --success-color: #89DC00;
+  --background-color: #f0f2f5;
+  --border-color: #e0e0e0;
+  --hover-color: #76c400;
+}

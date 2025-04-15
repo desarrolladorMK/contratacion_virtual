@@ -1,0 +1,66 @@
+.panel-rrhh-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .panel-rrhh-container h2 {
+    color: #210d65;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .tabla-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  
+  .card-postulante {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+    transition: 0.3s ease all;
+  }
+  
+  .card-postulante:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .card-postulante h3 {
+    margin-top: 0;
+    color: #210d65;
+  }
+  
+  .card-postulante p {
+    margin: 5px 0;
+    font-size: 15px;
+  }
+  
+  .card-postulante ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .card-postulante li {
+    margin: 8px 0;
+  }
+  
+  .card-postulante a {
+    color: #0073e6;
+    text-decoration: none;
+  }
+  
+  .card-postulante a:hover {
+    text-decoration: underline;
+  }
+  
+  .sin-documentos {
+    color: #999;
+    font-style: italic;
+  }
+  
