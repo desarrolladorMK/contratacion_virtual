@@ -1,246 +1,363 @@
+/* General container */
 .postulaciones-container {
-    padding: 20px;
-    font-family: "Roboto", Arial, sans-serif;
-    background-color: #d9dfe6;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 100vh;
-    overflow-x: hidden;
+  padding: 30px;
+  font-family: "Inter", "Roboto", Arial, sans-serif;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header and Logo */
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.back-logo {
+  display: block;
+}
+
+.logo-image {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+}
+
+.postulaciones-container h2 {
+  color: #210d65;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+}
+
+/* Search Bar */
+.busqueda-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.busqueda-boton {
+  background-color: #210d65;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.busqueda-boton:hover {
+  background-color: #89dc00;
+  transform: scale(1.05);
+}
+
+.busqueda-boton:focus {
+  outline: 2px solid #210d65;
+  outline-offset: 2px;
+}
+
+.busqueda-input {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: width 0.4s ease, opacity 0.4s ease, padding 0.4s ease, border-color 0.4s ease;
+}
+
+.busqueda-input.active {
+  width: 250px;
+  opacity: 1;
+  padding: 8px 12px;
+  border: 2px solid #d1d5db;
+}
+
+.busqueda-input:focus {
+  outline: none;
+  border-color: #210d65;
+  box-shadow: 0 0 0 3px rgba(33, 13, 101, 0.1);
+}
+
+/* Table Styles */
+.postulaciones-table {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Download Button */
+.download-button {
+  padding: 8px 16px;
+  background-color: #210d65;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #89dc00;
+  transform: translateY(-1px);
+}
+
+.download-button:focus {
+  outline: 2px solid #210d65;
+  outline-offset: 2px;
+}
+
+/* Estado Select */
+.estado-select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 13px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.estado-select:focus {
+  outline: none;
+  border-color: #210d65;
+  box-shadow: 0 0 0 2px rgba(33, 13, 101, 0.1);
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #210d65;
+  border-color: #210d65;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:focus ~ .checkmark {
+  box-shadow: 0 0 0 2px rgba(33, 13, 101, 0.2);
+}
+
+/* Observation */
+.editable-observation {
+  cursor: pointer;
+  padding: 6px;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 13px;
+  color: #333;
+  text-align: left;
+}
+
+.editable-observation:hover {
+  background-color: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.editable-observation:focus {
+  outline: 2px solid #210d65;
+  outline-offset: 2px;
+}
+
+/* Excel Button */
+.excel-button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #210d65;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.excel-button:hover {
+  background-color: #89dc00;
+  transform: translateY(-2px);
+}
+
+.excel-button:focus {
+  outline: 2px solid #210d65;
+  outline-offset: 2px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
+}
+
+.modal-content h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #210d65;
+  font-weight: 600;
+}
+
+.modal-content textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #210d65;
+  box-shadow: 0 0 0 2px rgba(33, 13, 101, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.save-observation-button {
+  padding: 10px 20px;
+  background-color: #210d65;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-observation-button:hover {
+  background-color: #89dc00;
+  transform: translateY(-1px);
+}
+
+.delete-observation-button {
+  padding: 10px 20px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-observation-button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
+/* Loading and Empty States */
+.loading-text,
+.empty-text {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .postulaciones-container {
+    padding: 15px;
   }
-  
-  .postulaciones-container h2 {
-    color: #000000;
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: -20px;
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  
-  .postulaciones-header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #333;
-  }
-  
-  .postulaciones-table {
+
+  .busqueda-input.active {
     width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 800px;
-    overflow-x: auto;
   }
-  
-  .postulaciones-table th,
-  .postulaciones-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-  }
-  
-  .postulaciones-table th {
-    background-color: #210d65;
-    color: white;
-    font-weight: bold;
-    font-size: 0.95rem;
-  }
-  
-  .postulaciones-table tr:nth-child(even) {
-    background-color: #f4f8fb;
-  }
-  
-  .postulaciones-table tr:hover {
-    background-color: #d9e6f2;
-    transition: background-color 0.3s ease;
-  }
-  
-  .download-button {
-    padding: 8px 15px;
-    background-color: #89dc00;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  
-  .download-button:hover {
-    background-color: #210d65;
-    transform: translateY(-2px);
-  }
-  
-  .excel-button {
-    padding: 12px 25px;
-    margin-bottom: 20px;
-    background-color: #210d65;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    transition: background 0.3s ease, transform 0.3s ease;
-    margin-top: 20px;
-  }
-  
-  .excel-button:hover {
-    background-color: #89dc00;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .search-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Estilos para el input de búsqueda */
-  .search-input {
-    display: inline-block;
-    width: 0;
-    opacity: 0;
-    padding: 0;
-    border: 2px solid transparent;
-    transition: width 0.4s ease, opacity 0.4s ease, padding 0.4s ease,
-      border-color 0.4s ease;
-    margin-right: 10px;
-  }
-  
-  .search-input.active {
-    width: 220px;
-    opacity: 1;
-    padding: 8px 12px;
-    border: 2px solid #ccc;
-  }
-  
-  .search-input:focus {
-    outline: none;
-    border-color: #007bff;
-  }
-  
-  .search-icon {
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: transform 0.3s;
-  }
-  
-  .search-icon:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Estilos para el modal y diseño mejorado */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+
   .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
+    width: 95%;
+    padding: 16px;
   }
-  
-  .modal-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #210d65;
-  }
-  
-  .modal-content p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.5;
-  }
-  
-  /* Estilos para el campo de observación editable */
-  .editable-observation {
-    cursor: pointer;
-    width: 100%;
-    padding: 5px;
-    border: 1px dashed transparent;
-    transition: border 0.3s ease, background-color 0.3s ease;
-    font-size: 0.7rem;
-  }
-  
-  /* Opcional: estilos para el input interno */
-  .editable-input {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    pointer-events: none; /* Evita la interacción directa con el input */
-  }
-  
-  .postulaciones-table input[type="text"] {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    color: #333;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: left;
-    padding: 5px;
-  }
-  
-  .postulaciones-table input[type="text"]:focus {
-    outline: none;
-    border-bottom: 2px solid #210d65;
-  }
-  
-  /* Estilos para el botón de guardar en el modal */
-  .save-observation-button {
-    padding: 10px 20px;
-    background-color: #210d65;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .save-observation-button:hover {
-    background-color: #89dc00;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Estilos para el botón de eliminar observación */
-  .delete-observation-button {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .delete-observation-button:hover {
-    background-color: #e60000;
-  }
-  
+}

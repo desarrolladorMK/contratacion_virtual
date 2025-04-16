@@ -1,67 +1,425 @@
 .panel-postulante {
-    max-width: 650px;
-    margin: 50px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9ff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.panel-postulante h2,
+.panel-postulante h4,
+.panel-postulante h5,
+.panel-postulante h6 {
+  color: #2c0e8c;
+  margin-bottom: 15px;
+}
+
+.panel-postulante p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+  color: #444;
+}
+
+.panel-postulante strong {
+  color: #2c0e8c;
+}
+
+.welcome-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #666; /* Color más sutil */
+  margin-bottom: 20px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInText 3s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .panel-postulante h2 {
-    font-size: 26px;
-    color: #210d65;
-    margin-bottom: 20px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .panel-postulante p {
-    font-size: 18px;
-    margin: 8px 0;
-    color: #444;
-  }
-  
-  .panel-postulante strong {
-    color: #210d65;
-  }
-  
-  .form-subida {
-    margin-top: 30px;
+}
+
+.supportive-message {
+  background: #e6f7e6;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #b3e6b3;
+}
+
+.supportive-message p {
+  font-size: 1rem;
+  color: #210d65;
+  margin: 0;
+  font-weight: 500;
+}
+
+.optional-message {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: left;
+  font-style: italic;
+}
+
+.error {
+  color: #ff3333;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.form-subida {
+  margin-top: 25px;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  background: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.form-subida:hover {
+  border-color: #ccc;
+  background-color: #fdfdfd;
+}
+
+.form-subida .instrucciones {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.documentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.documento-item {
+  text-align: left;
+}
+
+.documento-item label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c0e8c;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mandatory {
+  color: #ff3333;
+  font-weight: bold;
+}
+
+.multiple {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.subido {
+  font-size: 0.9rem;
+  color: #89dc00;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dropzone {
+  margin-bottom: 12px;
+}
+
+.dropzone-area {
+  border: 2px dashed #bbb;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropzone-area.active {
+  border-color: #4caf50;
+  background-color: #e8f5e9;
+}
+
+.dropzone-area p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.archivo-seleccionado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.archivo-seleccionado p {
+  font-size: 0.85rem;
+  color: #210d65;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 65%;
+}
+
+.archivo-seleccionado button {
+  background: #ff3333;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.archivo-seleccionado button:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+
+.beneficiarios-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f7f7ff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.beneficiario-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.beneficiario-item {
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beneficiario-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.beneficiario-item input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.beneficiario-item input:invalid {
+  border-color: #ff4d4d;
+}
+
+.add-beneficiario,
+.remove-beneficiario {
+  background: #2c0e8c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-beneficiario:hover {
+  background: #240a6e;
+  transform: scale(1.05);
+}
+
+.remove-beneficiario {
+  background: #ff3333;
+}
+
+.remove-beneficiario:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+
+.beneficiario-docs {
+  margin-top: 12px;
+}
+
+.form-subida button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-subida button[type="submit"]:hover {
+  background-color: #43a047;
+  transform: scale(1.05);
+}
+
+.form-subida button[type="submit"].disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.contador-documentos,
+.lista-documentos {
+  margin-top: 25px;
+  text-align: left;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+}
+
+.contador-documentos h4,
+.lista-documentos h4 {
+  color: #210d65;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.contador-documentos p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.contador-documentos .completado {
+  color: #89dc00;
+  font-weight: 500;
+}
+
+.faltantes-container h5 {
+  color: #210d65;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.faltantes-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.faltantes-lista li {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.faltante-item {
+  font-weight: 500;
+}
+
+.faltante-info {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+}
+
+.documentos-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.documento-subido-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.documento-subido-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.eliminar-documento {
+  background: #ff3333;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.eliminar-documento:hover {
+  background: #cc0000;
+  transform: scale(1.05);
+}
+
+.ver-archivo {
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.ver-archivo:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .panel-postulante {
+    margin: 20px;
     padding: 20px;
-    border: 1px dashed #ccc;
-    border-radius: 12px;
-    background: #f9f9f9;
-    text-align: left;
   }
-  
-  .form-subida h4 {
-    color: #210d65;
-    margin-bottom: 15px;
+
+  .documentos-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .form-subida input[type="file"],
-  .form-subida select {
+
+  .beneficiario-buttons {
+    flex-direction: column;
+  }
+
+  .add-beneficiario {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 15px;
   }
-  
-  .form-subida button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #89DC00;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+  .welcome-message {
+    font-size: 1.2rem;
   }
-  
-  .form-subida button:hover {
-    background-color: #76c500;
-  }
-  
+}
